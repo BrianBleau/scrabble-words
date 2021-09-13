@@ -219,10 +219,37 @@ const ques17 = words.forEach((word) => {
   let wordArray = word.split("");
   for (let i = 0; i < wordArray.length; i++) {
     if (wordArray[i] === wordArray[i + 1]) {
-      let alphaIndex = alpha.indexOf(wordArray[i]);
-      alpha.splice(alphaIndex, 1);
-      console.log(answer17);
-      answer17 = alpha;
+      if (alpha.indexOf(wordArray[i])) {
+        let alphaIndex = alpha.indexOf(wordArray[i]);
+        alpha.splice(alphaIndex, 1);
+        answer17 = alpha;
+      }
     }
   }
 });
+// const test = function (word) {
+//   let wordArray = word.split("");
+//   for (let i = 0; i < wordArray.length; i++) {
+//     if (wordArray[i] === wordArray[i + 1]) {
+//       if (alpha.indexOf(wordArray[i])) {
+//         let alphaIndex = alpha.indexOf(wordArray[i]);
+//         alpha.splice(alphaIndex, 1);
+//         answer17 = alpha;
+//       }
+//     }
+//   }
+// };
+
+// test("BATTLE");
+// test("BATTING");
+// 17 test
+// let answerTest17 = [];
+// const test17 = words.forEach((word) => {
+//   let wordArray = word.split("");
+//   for (let i = 0; i < wordArray.length; i++) {
+//     if (wordArray[i] === wordArray[i + 1]) {
+//       answerTest17.push(word);
+//     }
+//   }
+// });
+// console.log(answerTest17);
