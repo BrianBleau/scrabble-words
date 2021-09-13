@@ -184,3 +184,45 @@ const ques16 = words.forEach((word) => {
     }
   }
 });
+
+let alpha = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+];
+
+let answer17;
+const ques17 = words.forEach((word) => {
+  let wordArray = word.split("");
+  for (let i = 0; i < wordArray.length; i++) {
+    if (wordArray[i] === wordArray[i + 1]) {
+      let alphaIndex = alpha.indexOf(wordArray[i]);
+      alpha.splice(alphaIndex, 1);
+      console.log(answer17);
+      answer17 = alpha;
+    }
+  }
+});
