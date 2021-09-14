@@ -1,7 +1,7 @@
+const fs = require("fs");
 const http = require("http");
 const hostname = "127.0.0.1";
 const port = 3000;
-const fs = require("fs");
 
 fs.readFile("./index.html", function (err, html) {
   if (err) {
@@ -219,20 +219,22 @@ const ques17 = words.forEach((word) => {
   let wordArray = word.split("");
   for (let i = 0; i < wordArray.length; i++) {
     if (wordArray[i] === wordArray[i + 1]) {
-      if (alpha.indexOf(wordArray[i])) {
-        let alphaIndex = alpha.indexOf(wordArray[i]);
+      let alphaIndex = alpha.indexOf(wordArray[i]);
+      if (alpha.indexOf(wordArray[i]) !== -1) {
         alpha.splice(alphaIndex, 1);
         answer17 = alpha;
       }
     }
   }
 });
+console.log(answer17);
 // const test = function (word) {
 //   let wordArray = word.split("");
 //   for (let i = 0; i < wordArray.length; i++) {
 //     if (wordArray[i] === wordArray[i + 1]) {
-//       if (alpha.indexOf(wordArray[i])) {
-//         let alphaIndex = alpha.indexOf(wordArray[i]);
+//       let alphaIndex = alpha.indexOf(wordArray[i]);
+//       console.log(alphaIndex);
+//       if (alphaIndex !== -1) {
 //         alpha.splice(alphaIndex, 1);
 //         answer17 = alpha;
 //       }
@@ -242,6 +244,9 @@ const ques17 = words.forEach((word) => {
 
 // test("BATTLE");
 // test("BATTING");
+// test("AARDVARK");
+// test("AA");
+// console.log(alpha);
 // 17 test
 // let answerTest17 = [];
 // const test17 = words.forEach((word) => {
